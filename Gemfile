@@ -18,6 +18,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "factory_bot_rails"
   gem 'selenium-webdriver'
+  gem 'rubocop-airbnb'
 end
 
 group :test do

@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :category do
-    name { "サンプルカテゴリー"}
+    name { "サンプルカテゴリー" }
   end
 end
