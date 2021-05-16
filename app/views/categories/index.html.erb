@@ -1,0 +1,12 @@
+<h1>カテゴリー一覧ページ</h1>
+
+<%= form_for(@category, url: {controller: 'categories', action: 'create_category' }) do |f| %>
+    <%= hidden_field_tag :category_id, @category_id %>
+    <%= f.text_area :name, :placeholder => "カテゴリー名入力してください" %>
+    <%= f.submit "作成" %>
+<% end %>
+
+<% @categories.each do |category| %>
+    <%= link_to "#{category.name}", "/categories/#{category.id}" %>
+        
+<% end %>

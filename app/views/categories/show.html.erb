@@ -1,0 +1,21 @@
+<h1>アイデア一覧ページ</h1>
+
+<%= form_for(@idea, url: {controller: 'categories', action: 'create_idea' }) do |f| %>
+    <%= hidden_field_tag :category_id, @category_id %>
+    <%= f.text_area :body, :placeholder => "アイデア名入力してください" %>
+    <%= f.submit "作成" %>
+<% end %>
+
+
+<% @ideas.each do |idea| %>
+<%= flash[:aiueo] %>
+    <div class="member_message_box">
+        <div class="msg_box">
+          <div class="msg_head">
+              <div class="body">
+                  <p><%= idea.body%></p>
+              </div>
+          </div>
+      </div>
+    </div>
+<% end %>
