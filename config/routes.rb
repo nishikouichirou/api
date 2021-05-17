@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       post :create_idea
     end
   end
-  
+
   namespace :api, path: '/api' do
     get '/idea_list', to: 'categories#idea_list'
     post '/create_idea', to: 'categories#create_idea'
