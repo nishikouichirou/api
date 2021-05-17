@@ -1,5 +1,7 @@
 module Api
   class CategoriesController < Api::ApplicationController
+    protect_from_forgery
+
     def idea_list
       @data = []
       count = 1
